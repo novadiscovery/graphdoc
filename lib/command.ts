@@ -349,7 +349,7 @@ export class GraphQLDocumentGenerator extends Command<IFlags, {}> {
     const filePath = path.resolve(projectPackageJSON.graphdoc.output, file);
     return writeFile(
       filePath,
-      render(partials.index as string, templateData, partials)
+      render(partials.index as string, templateData, partials as any)
     );
   }
 }
